@@ -43,10 +43,8 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: relative;
 }
 
-/* Menambah ruang untuk butang WhatsApp */
 header h1 {
     margin: 0;
 }
@@ -130,19 +128,31 @@ header p {
     margin-bottom: 10px;
 }
 
-/* Gaya untuk ikon WhatsApp */
-.whatsapp-icon {
-    width: 50px;  /* Sesuaikan saiz gambar ikon */
-    height: 50px;
-    border-radius: 50%;  /* Jika mahu ikon berbentuk bulat */
-    position: absolute;
-    bottom: 20px;  /* Letakkan butang di bawah gambar profil */
-    right: 20px;  /* Letakkan butang ke kanan */
-    transition: transform 0.3s ease;  /* Animasi hover */
-    cursor: pointer;  /* Menunjukkan bahawa ia boleh diklik */
+/* Gaya untuk butang WhatsApp */
+.whatsapp-button {
+    position: fixed; /* Pastikan ia tetap pada kedudukan */
+    bottom: 20px;    /* Letakkan 20px dari bawah */
+    right: 20px;     /* Letakkan 20px dari kanan */
+    z-index: 1000;   /* Pastikan ia berada di atas elemen lain */
+    background-color: #25d366;  /* Warna hijau WhatsApp */
+    border-radius: 50%;  /* Bentuk bulat */
+    padding: 15px;   /* Padding untuk saiz butang */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan untuk kelihatan lebih menarik */
 }
 
-/* Hover effect untuk ikon WhatsApp */
-.whatsapp-icon:hover {
-    transform: scale(1.1);  /* Memperbesar ikon apabila hover */
+.whatsapp-button img {
+    width: 50px;    /* Saiz ikon WhatsApp */
+    height: 50px;   /* Saiz ikon WhatsApp */
+}
+
+/* Responsif untuk saiz skrin kecil (contohnya, telefon bimbit) */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        padding: 10px;  /* Sesuaikan padding untuk skrin lebih kecil */
+    }
+
+    .whatsapp-button img {
+        width: 40px;    /* Kurangkan saiz ikon di telefon */
+        height: 40px;   /* Kurangkan saiz ikon di telefon */
+    }
 }
