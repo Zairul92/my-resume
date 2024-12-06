@@ -107,8 +107,21 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
+    font-size: 14px; /* Saiz font */
+    font-family: Arial, sans-serif; /* Jenis font */
 }
 
 footer p {
     margin: 0;
+    animation: moveText 10s linear infinite; /* Menambah animasi */
+}
+
+/* Animasi untuk pergerakan teks copyright */
+@keyframes moveText {
+    0% {
+        transform: translateX(100%); /* Mula dari luar kanan */
+    }
+    100% {
+        transform: translateX(-100%); /* Bergerak ke luar kiri */
+    }
 }
