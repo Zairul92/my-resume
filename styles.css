@@ -8,6 +8,7 @@ body {
     min-height: 100vh; /* Pastikan badan halaman mempunyai ketinggian sekurang-kurangnya 100% */
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; /* Menyembunyikan scroll mendatar */
 }
 
 /* Gaya footer */
@@ -43,6 +44,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
+    position: relative; /* Untuk kedudukan butang WhatsApp */
 }
 
 header h1 {
@@ -60,6 +62,26 @@ header p {
     border-radius: 50%;  /* Gambar berbentuk bulat */
     display: block;
     margin: 20px auto;
+}
+
+/* Gaya untuk butang WhatsApp */
+.whatsapp-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-icon {
+    width: 40px;
+    height: 40px;
 }
 
 /* Gaya untuk bahagian ringkasan */
@@ -126,33 +148,4 @@ header p {
 
 .skills li {
     margin-bottom: 10px;
-}
-
-/* Gaya untuk butang WhatsApp */
-.whatsapp-button {
-    position: fixed; /* Pastikan ia tetap pada kedudukan */
-    bottom: 20px;    /* Letakkan 20px dari bawah */
-    right: 20px;     /* Letakkan 20px dari kanan */
-    z-index: 1000;   /* Pastikan ia berada di atas elemen lain */
-    background-color: #25d366;  /* Warna hijau WhatsApp */
-    border-radius: 50%;  /* Bentuk bulat */
-    padding: 15px;   /* Padding untuk saiz butang */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Bayangan untuk kelihatan lebih menarik */
-}
-
-.whatsapp-button img {
-    width: 50px;    /* Saiz ikon WhatsApp */
-    height: 50px;   /* Saiz ikon WhatsApp */
-}
-
-/* Responsif untuk saiz skrin kecil (contohnya, telefon bimbit) */
-@media (max-width: 768px) {
-    .whatsapp-button {
-        padding: 10px;  /* Sesuaikan padding untuk skrin lebih kecil */
-    }
-
-    .whatsapp-button img {
-        width: 40px;    /* Kurangkan saiz ikon di telefon */
-        height: 40px;   /* Kurangkan saiz ikon di telefon */
-    }
 }
