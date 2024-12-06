@@ -5,6 +5,36 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    min-height: 100vh; /* Pastikan badan halaman mempunyai ketinggian sekurang-kurangnya 100% */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gaya footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Pastikan footer berada di bawah */
+    font-size: 14px; /* Saiz font */
+    font-family: Arial, sans-serif; /* Jenis font */
+}
+
+/* Pastikan teks copyright bergerak */
+footer p {
+    margin: 0;
+    animation: moveText 10s linear infinite; /* Menambah animasi */
+}
+
+/* Animasi untuk pergerakan teks copyright */
+@keyframes moveText {
+    0% {
+        transform: translateX(100%); /* Mula dari luar kanan */
+    }
+    100% {
+        transform: translateX(-100%); /* Bergerak ke luar kiri */
+    }
 }
 
 /* Bahagian header */
@@ -96,32 +126,4 @@ header p {
 
 .skills li {
     margin-bottom: 10px;
-}
-
-/* Gaya footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    font-size: 14px; /* Saiz font */
-    font-family: Arial, sans-serif; /* Jenis font */
-}
-
-footer p {
-    margin: 0;
-    animation: moveText 10s linear infinite; /* Menambah animasi */
-}
-
-/* Animasi untuk pergerakan teks copyright */
-@keyframes moveText {
-    0% {
-        transform: translateX(100%); /* Mula dari luar kanan */
-    }
-    100% {
-        transform: translateX(-100%); /* Bergerak ke luar kiri */
-    }
 }
